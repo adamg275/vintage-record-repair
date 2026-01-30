@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './Contact.css';
 
 interface ContactProps {
@@ -6,8 +6,11 @@ interface ContactProps {
 }
 
 function Contact({ selectedService }: ContactProps) {
-    const [service, setService] = useState('');
+    const [manualService, setManualService] = useState('');
     const [files, setFiles] = useState<FileList | null>(null);
+
+    // Use the prop if set, otherwise use manual selection
+    const service = selectedService || manualService;
 
     const serviceOptions = [
         {
@@ -34,12 +37,6 @@ function Contact({ selectedService }: ContactProps) {
             ]
         },
     ];
-
-    useEffect(() => {
-        if (selectedService) {
-            setService(selectedService);
-        }
-    }, [selectedService]);
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files) {
@@ -116,7 +113,7 @@ function Contact({ selectedService }: ContactProps) {
                             id="service"
                             name="service"
                             value={service}
-                            onChange={(e) => setService(e.target.value)}
+                            onChange={(e) => setManualService(e.target.value)}
                             required
                         >
                             <option value="">-- Select a service --</option>
