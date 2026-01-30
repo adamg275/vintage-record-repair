@@ -71,14 +71,17 @@ function Contact({ selectedService }: ContactProps) {
                             <span>Usually respond within 24 hours</span>
                         </div>
                     </div>
-                </div>
+                </div>  
                 <form
                     className="contact-form"
                     name="enquiry"
                     method="POST"
                     data-netlify="true"
+                    data-netlify-honeypot="bot-field"
                     encType="multipart/form-data"
+                    action="/success"
                 >
+                    <input type="hidden" name="bot-field" />
                     <input type="hidden" name="form-name" value="enquiry" />
                     <input type="hidden" name="subject" value="New enquiry from vintagerecordplayers.co.uk" />
 
@@ -165,7 +168,7 @@ function Contact({ selectedService }: ContactProps) {
                         </div>
                     </div>
                     <button type="submit" className="btn btn-primary btn-full">Send Enquiry</button>
-                </form>
+                </>
             </div>
         </section>
     );
