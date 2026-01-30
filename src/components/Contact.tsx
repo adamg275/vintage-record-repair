@@ -9,7 +9,6 @@ function Contact({ selectedService }: ContactProps) {
     const [manualService, setManualService] = useState('');
     const [files, setFiles] = useState<FileList | null>(null);
 
-    // Use the prop if set, otherwise use manual selection
     const service = selectedService || manualService;
 
     const serviceOptions = [
@@ -71,7 +70,7 @@ function Contact({ selectedService }: ContactProps) {
                             <span>Usually respond within 24 hours</span>
                         </div>
                     </div>
-                </div>  
+                </div>
                 <form
                     className="contact-form"
                     name="enquiry"
@@ -79,11 +78,10 @@ function Contact({ selectedService }: ContactProps) {
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
                     encType="multipart/form-data"
-                    action="/success"
+                    action="/success.html"
                 >
-                    <input type="hidden" name="bot-field" />
                     <input type="hidden" name="form-name" value="enquiry" />
-                    <input type="hidden" name="subject" value="New enquiry from vintagerecordplayers.co.uk" />
+                    <input type="hidden" name="bot-field" />
 
                     <div className="form-row">
                         <div className="form-group">
@@ -101,7 +99,7 @@ function Contact({ selectedService }: ContactProps) {
                             <input type="tel" id="phone" name="phone" />
                         </div>
                         <div className="form-group">
-                            <label htmlFor="player">Brand & Model</label>
+                            <label htmlFor="player">Brand and Model</label>
                             <input
                                 type="text"
                                 id="player"
@@ -168,7 +166,7 @@ function Contact({ selectedService }: ContactProps) {
                         </div>
                     </div>
                     <button type="submit" className="btn btn-primary btn-full">Send Enquiry</button>
-                </>
+                </form>
             </div>
         </section>
     );
