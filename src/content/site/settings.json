@@ -11,7 +11,7 @@
       "turntable repair West Yorkshire",
       "vintage record player shop"
     ],
-    "ogImage": "/uploads/img_3012.jpg"
+    "ogImage": ""
   },
   "brand": {
     "businessName": "Vintage Record Player Repair & Restoration",
@@ -38,7 +38,7 @@
       "Every machine is assessed on its own condition, not pushed into a one-size-fits-all package. Some need a simple service, some need mechanical overhaul, and some deserve a full cosmetic and electrical restoration.",
       "When players are prepared for sale, the aim is the same: clear photographs, honest descriptions and work that gives the next owner confidence in what they are buying."
     ],
-    "image": "/uploads/img_3012.jpg",
+    "image": "/uploads/dansette.jpg",
     "imageAlt": "A restored vintage Dansette record player with fresh cabinet covering"
   },
   "specialisms": [
@@ -53,9 +53,9 @@
   ],
   "contact": {
     "location": "West Yorkshire, UK",
-    "responseTime": "Usually replies within one working day",
+    "responseTime": "Within one working day",
     "email": "gary@vintagerecordplayers.co.uk",
     "phone": "",
-    "emailSetupNote": "Netlify form notifications should be sent to gary@vintagerecordplayers.co.uk, which is hosted on Porkbun."
+    "emailSetupNote": ""
   }
 }
