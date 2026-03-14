@@ -8,12 +8,23 @@ interface ContactProps {
     contact: ContactContent;
 }
 
+function buildPrefilledMessage(service: string) {
+    if (service.startsWith('Shop item: ')) {
+        const itemTitle = service.replace('Shop item: ', '');
+        return `I am enquiring about ${itemTitle}. Please let me know if it is still available, the overall condition, and the delivery or collection options.`;
+    }
+
+    return '';
+}
+
 function Contact({ selectedService, serviceOptions, contact }: ContactProps) {
     const [manualService, setManualService] = useState(selectedService);
+    const [message, setMessage] = useState(() => buildPrefilledMessage(selectedService));
     const [files, setFiles] = useState<FileList | null>(null);
 
     useEffect(() => {
         setManualService(selectedService);
+        setMessage(buildPrefilledMessage(selectedService));
     }, [selectedService]);
 
     const uniqueServiceOptions = useMemo(
@@ -26,10 +37,10 @@ function Contact({ selectedService, serviceOptions, contact }: ContactProps) {
             <div className="contact__inner">
                 <div className="contact__intro">
                     <span className="section-label">Get in touch</span>
-                    <h2 id="contact-heading">Tell Gary what you have, what it is doing and how you want to ship it.</h2>
+                    <h2 id="contact-heading">Tell Gary which player, service or sale item you want to discuss.</h2>
                     <p>
-                        Use the form for repair enquiries, restoration bookings or questions about a shop listing. Netlify will capture the
-                        submission and can forward notifications to your Porkbun-hosted email inbox.
+                        Use the form for repair enquiries, restoration bookings or questions about a shop listing. Netlify captures the
+                        submission and forwards the details to Gary by email.
                     </p>
 
                     <dl className="contact__details">
@@ -120,6 +131,8 @@ function Contact({ selectedService, serviceOptions, contact }: ContactProps) {
                         <textarea
                             name="message"
                             rows={6}
+                            value={message}
+                            onChange={(event) => setMessage(event.target.value)}
                             placeholder="Describe the fault, any known history, and whether this is a repair, restoration or purchase enquiry."
                             required
                         ></textarea>

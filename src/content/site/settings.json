@@ -1,61 +1,61 @@
 {
-    "seo":  {
-                "siteName":  "Vintage Record Player Repair \u0026 Restoration",
-                "defaultTitle":  "Vintage Record Player Repair \u0026 Restoration",
-                "description":  "Vintage record player repair, restoration and resale from West Yorkshire. Specialist servicing for Dansette, Bush, HMV and other classic portable players.",
-                "siteUrl":  "https://vintagerecordplayers.co.uk",
-                "keywords":  [
-                                 "vintage record player repair",
-                                 "record player restoration",
-                                 "Dansette restoration",
-                                 "turntable repair West Yorkshire",
-                                 "vintage record player shop"
-                             ],
-                "ogImage":  "/uploads/img_3012.jpg"
-            },
-    "brand":  {
-                  "businessName":  "Vintage Record Player Repair \u0026 Restoration",
-                  "tagline":  "Repair, restoration and ready-to-play vintage record players.",
-                  "serviceArea":  "West Yorkshire, UK",
-                  "responseTime":  "Usually replies within one working day",
-                  "ebayUrl":  "https://www.ebay.co.uk/usr/tracypaper"
-              },
-    "hero":  {
-                 "eyebrow":  "Workshop service and restored players",
-                 "headline":  "Careful restoration for machines worth keeping.",
-                 "description":  "Gary repairs, restores and sells vintage record players with an emphasis on honest advice, serviceable parts and period-correct presentation.",
-                 "primaryCtaLabel":  "Request a quote",
-                 "secondaryCtaLabel":  "See how it works",
-                 "trustPoints":  [
-                                     "Specialist work on Dansette, Bush, HMV and similar players",
-                                     "Diagnostic repair, servicing and full restoration options",
-                                     "Nationwide customers supported with self-ship or courier collection"
-                                 ]
-             },
-    "about":  {
-                  "title":  "Built around real workshop work, not stock promises.",
-                  "paragraphs":  [
-                                     "What started as a long-running obsession with vintage sound became a practical workshop service. The focus is simple: make each player reliable, safe to use and honest about what has been replaced or preserved.",
-                                     "Alongside repair work, restored machines are prepared for sale with clear descriptions and current photographs so buyers know exactly what they are getting."
-                                 ],
-                  "image":  "/uploads/img_3012.jpg",
-                  "imageAlt":  "A restored vintage Dansette record player with fresh cabinet covering"
-              },
-    "specialisms":  [
-                        "Dansette",
-                        "Bush",
-                        "HMV",
-                        "Pye",
-                        "Fidelity",
-                        "Alba",
-                        "Ferguson",
-                        "Elizabethan"
-                    ],
-    "contact":  {
-                    "location":  "West Yorkshire, UK",
-                    "responseTime":  "Usually replies within one working day",
-                    "email":  "gary@vintagerecordplayers.co.uk",
-                    "phone":  "",
-                    "emailSetupNote":  "Netlify form notifications should be sent to gary@vintagerecordplayers.co.uk, which is hosted on Porkbun."
-                }
+  "seo": {
+    "siteName": "Vintage Record Player Repair & Restoration",
+    "defaultTitle": "Vintage Record Player Repair & Restoration",
+    "description": "Vintage record player repair, restoration and sale stock from West Yorkshire. Specialist work on Dansette, Bush, HMV and other classic portable players.",
+    "siteUrl": "https://vintagerecordplayers.co.uk",
+    "keywords": [
+      "vintage record player repair",
+      "record player restoration",
+      "Dansette restoration",
+      "turntable repair West Yorkshire",
+      "vintage record player shop"
+    ],
+    "ogImage": "/uploads/img_3012.jpg"
+  },
+  "brand": {
+    "businessName": "Vintage Record Player Repair & Restoration",
+    "tagline": "Repair, restoration and carefully prepared vintage players for sale.",
+    "serviceArea": "West Yorkshire, UK",
+    "responseTime": "Usually replies within one working day",
+    "ebayUrl": "https://www.ebay.co.uk/usr/tracypaper"
+  },
+  "hero": {
+    "eyebrow": "Workshop repair, restoration and sale stock",
+    "headline": "Vintage record players, properly repaired and honestly described.",
+    "description": "Gary works on classic portable players from his West Yorkshire workshop, offering careful fault-finding, sympathetic restoration and well-presented machines ready for their next owner.",
+    "primaryCtaLabel": "Request a quote",
+    "secondaryCtaLabel": "See how it works",
+    "trustPoints": [
+      "Experienced work on Dansette, Bush, HMV and similar players",
+      "Straightforward pricing for repair, service and restoration",
+      "Nationwide enquiries supported by self-shipping or courier collection"
+    ]
+  },
+  "about": {
+    "title": "A workshop built around practical restoration, not generic sales talk.",
+    "paragraphs": [
+      "Every machine is assessed on its own condition, not pushed into a one-size-fits-all package. Some need a simple service, some need mechanical overhaul, and some deserve a full cosmetic and electrical restoration.",
+      "When players are prepared for sale, the aim is the same: clear photographs, honest descriptions and work that gives the next owner confidence in what they are buying."
+    ],
+    "image": "/uploads/img_3012.jpg",
+    "imageAlt": "A restored vintage Dansette record player with fresh cabinet covering"
+  },
+  "specialisms": [
+    "Dansette",
+    "Bush",
+    "HMV",
+    "Pye",
+    "Fidelity",
+    "Alba",
+    "Ferguson",
+    "Elizabethan"
+  ],
+  "contact": {
+    "location": "West Yorkshire, UK",
+    "responseTime": "Usually replies within one working day",
+    "email": "gary@vintagerecordplayers.co.uk",
+    "phone": "",
+    "emailSetupNote": "Netlify form notifications should be sent to gary@vintagerecordplayers.co.uk, which is hosted on Porkbun."
+  }
 }

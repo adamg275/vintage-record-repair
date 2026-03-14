@@ -61,7 +61,7 @@ function App() {
         () => [
             ...servicesContent.categories.flatMap((category) => category.items.map((item) => item.name)),
             ...servicesContent.servicePlans.flatMap((plan) => plan.options.map((option) => option.prefillService)),
-            ...shopListings.map((listing) => `Shop enquiry - ${listing.title}`),
+            ...shopListings.map((listing) => `Shop item: ${listing.title}`),
         ],
         [],
     );
@@ -76,7 +76,7 @@ function App() {
             case '/shop':
                 return {
                     title: `Shop | ${siteSettings.seo.defaultTitle}`,
-                    description: 'Browse restored and previously sold vintage record players with editable descriptions, images and optional direct checkout links.',
+                    description: 'Browse restored and previously sold vintage record players with editable descriptions, images and optional PayPal checkout links.',
                 };
             default:
                 return {
@@ -95,6 +95,7 @@ function App() {
             areaServed: siteSettings.brand.serviceArea,
             image: siteSettings.seo.ogImage,
             url: siteSettings.seo.siteUrl || undefined,
+            email: siteSettings.contact.email || undefined,
         };
 
         if (currentPath === '/shop') {

@@ -24,16 +24,16 @@ function Shop({ listings, onSelectService }: ShopProps) {
         <section className="shop-page" aria-labelledby="shop-heading">
             <div className="page-intro">
                 <span className="section-label">Webshop</span>
-                <h1 id="shop-heading">Sale listings that are easy to update, photograph and publish.</h1>
+                <h1 id="shop-heading">Restored players for sale, with honest descriptions and simple PayPal checkout.</h1>
                 <p>
-                    Each listing is driven by Decap content. Add photographs, descriptions, prices and an optional checkout link.
-                    If a PayPal checkout URL is present, the card shows a direct purchase button automatically.
+                    Each listing is managed through Decap CMS, so photographs, condition notes, prices and availability stay current.
+                    Add a PayPal checkout link and the main button becomes a direct purchase button automatically.
                 </p>
             </div>
 
             <div className="shop-grid">
                 {listings.map((listing) => {
-                    const enquiryLabel = `Shop enquiry - ${listing.title}`;
+                    const enquiryLabel = `Shop item: ${listing.title}`;
                     const isAvailable = listing.status === 'available';
                     const hasCheckout = Boolean(listing.checkoutUrl);
 
@@ -48,12 +48,12 @@ function Shop({ listings, onSelectService }: ShopProps) {
                                     <h2>{listing.title}</h2>
                                     <span>{listing.price}</span>
                                 </div>
-                                <p className="shop-card__meta">{listing.era} · {listing.condition}</p>
+                                <p className="shop-card__meta">{listing.era} Â· {listing.condition}</p>
                                 <p>{listing.shortDescription}</p>
                                 <p className="shop-card__description">{listing.description}</p>
                                 <div className="shop-card__actions">
                                     {isAvailable && hasCheckout ? (
-                                        <a className="btn btn-primary" href={listing.checkoutUrl} target="_blank" rel="noreferrer">Buy now</a>
+                                        <a className="btn btn-primary" href={listing.checkoutUrl} target="_blank" rel="noreferrer">Pay with PayPal</a>
                                     ) : (
                                         <button type="button" className="btn btn-primary" onClick={() => onSelectService(enquiryLabel)}>
                                             {isAvailable ? 'Ask about this player' : 'Ask for similar stock'}
@@ -73,4 +73,3 @@ function Shop({ listings, onSelectService }: ShopProps) {
 }
 
 export default Shop;
-
