@@ -1,0 +1,166 @@
+{
+  "categories": [
+    {
+      "category": "Repairs",
+      "description": "Targeted work for a clear fault or failure.",
+      "items": [
+        {
+          "name": "Diagnostic assessment",
+          "price": "Free with repair",
+          "summary": "Bench testing and fault finding before parts or deeper work are agreed."
+        },
+        {
+          "name": "Motor repair or replacement",
+          "price": "From £40",
+          "summary": "Mechanical strip-down, lubrication and motor replacement where needed."
+        },
+        {
+          "name": "Belt or idler service",
+          "price": "From £15",
+          "summary": "Wear parts replaced and speed stability checked."
+        },
+        {
+          "name": "Electrical fault repair",
+          "price": "From £30",
+          "summary": "Switching, wiring and amplifier faults investigated and repaired."
+        },
+        {
+          "name": "Speaker, stylus or cartridge replacement",
+          "price": "From £20",
+          "summary": "Common consumables and playback parts refreshed where appropriate."
+        }
+      ]
+    },
+    {
+      "category": "Restoration",
+      "description": "Deeper workshop work for tired or neglected machines.",
+      "items": [
+        {
+          "name": "Full mechanical restoration",
+          "price": "From £120",
+          "summary": "Mechanism overhaul, cleaning, service parts and performance checks."
+        },
+        {
+          "name": "Cabinet re-covering",
+          "price": "From £80",
+          "summary": "Fresh cabinet finish while keeping the look faithful to the era."
+        },
+        {
+          "name": "Full restoration with re-cover",
+          "price": "From £180",
+          "summary": "Mechanical and cosmetic restoration handled as one project."
+        }
+      ]
+    },
+    {
+      "category": "Servicing",
+      "description": "Routine maintenance for players that still work but need attention.",
+      "items": [
+        {
+          "name": "Basic service",
+          "price": "£35",
+          "summary": "Clean, lubricate, safety check and playback test."
+        },
+        {
+          "name": "Full service",
+          "price": "£55",
+          "summary": "Basic service plus belt, stylus and setup checks."
+        }
+      ]
+    }
+  ],
+  "note": "Original parts are used where sensible and safe. If a modern substitute is the better option, it is discussed before the job moves ahead.",
+  "processSteps": [
+    {
+      "title": "Choose the level of work",
+      "description": "Start with a diagnostic, service or restoration option so the expected scope is clear before the player travels."
+    },
+    {
+      "title": "Pick your shipping route",
+      "description": "Choose the lower self-shipping price or the higher courier-included option if you want collection arranged."
+    },
+    {
+      "title": "Approve the plan",
+      "description": "After inspection, any extra parts or unexpected faults are confirmed before additional work is carried out."
+    },
+    {
+      "title": "Receive updates and return delivery",
+      "description": "Once tested and signed off, the player is made ready for collection, return shipping or onward delivery."
+    }
+  ],
+  "servicePlans": [
+    {
+      "name": "Workshop assessment",
+      "startingPrice": "From £35",
+      "summary": "Best when you need a firm diagnosis before deciding on a repair.",
+      "includes": [
+        "Bench diagnosis and initial safety review",
+        "Recommendation for repair, service or restoration",
+        "Transparent estimate before further work"
+      ],
+      "options": [
+        {
+          "name": "You handle shipping",
+          "price": "From £35",
+          "summary": "You drop off or send the player yourself.",
+          "prefillService": "Workshop assessment - self shipping"
+        },
+        {
+          "name": "Courier included",
+          "price": "From £65",
+          "summary": "Higher price includes managed collection planning and return coordination.",
+          "prefillService": "Workshop assessment - courier included"
+        }
+      ]
+    },
+    {
+      "name": "Service and setup",
+      "startingPrice": "From £55",
+      "summary": "For working players that need dependable everyday use again.",
+      "includes": [
+        "Cleaning, lubrication and setup checks",
+        "Wear-part inspection and playback testing",
+        "Advice on any larger issues discovered"
+      ],
+      "options": [
+        {
+          "name": "You handle shipping",
+          "price": "From £55",
+          "summary": "Lower price if you arrange delivery to Gary yourself.",
+          "prefillService": "Service and setup - self shipping"
+        },
+        {
+          "name": "Courier included",
+          "price": "From £95",
+          "summary": "Higher bundled price for customers who want collection arranged.",
+          "prefillService": "Service and setup - courier included"
+        }
+      ]
+    },
+    {
+      "name": "Full restoration",
+      "startingPrice": "From £180",
+      "summary": "For players that need deep mechanical and cosmetic work.",
+      "includes": [
+        "Mechanical restoration and testing",
+        "Cabinet recovery or cosmetic refresh where agreed",
+        "Final playback check before return"
+      ],
+      "options": [
+        {
+          "name": "You handle shipping",
+          "price": "From £180",
+          "summary": "Lower restoration price when the customer manages shipping.",
+          "prefillService": "Full restoration - self shipping"
+        },
+        {
+          "name": "Courier included",
+          "price": "From £235",
+          "summary": "Higher bundled option for a managed collection and return journey.",
+          "prefillService": "Full restoration - courier included"
+        }
+      ]
+    }
+  ],
+  "shippingNote": "Courier pricing depends on size, destination and packing requirements. Final transport costs are confirmed before collection is booked."
+}

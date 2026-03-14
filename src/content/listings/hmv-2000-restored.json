@@ -1,0 +1,15 @@
+{
+  "slug": "hmv-2000-restored",
+  "title": "HMV 2000 portable player",
+  "price": "£295",
+  "status": "sold",
+  "condition": "Restored and sold",
+  "era": "Late 1950s",
+  "shortDescription": "Example listing showing how sold stock can stay on the site as proof of finished work.",
+  "description": "Use sold listings to document previous restorations and keep the shop feeling active without manually rebuilding the page each time.",
+  "image": "/uploads/img_3012.jpg",
+  "alt": "Restored HMV 2000 vintage record player",
+  "featured": false,
+  "showOnWebsite": true,
+  "checkoutUrl": ""
+}

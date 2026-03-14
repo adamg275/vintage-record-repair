@@ -1,78 +1,65 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import type { ContactContent } from '../content/content';
 import './Contact.css';
 
 interface ContactProps {
     selectedService: string;
+    serviceOptions: string[];
+    contact: ContactContent;
 }
 
-function Contact({ selectedService }: ContactProps) {
-    const [manualService, setManualService] = useState('');
+function Contact({ selectedService, serviceOptions, contact }: ContactProps) {
+    const [manualService, setManualService] = useState(selectedService);
     const [files, setFiles] = useState<FileList | null>(null);
 
-    const service = selectedService || manualService;
+    useEffect(() => {
+        setManualService(selectedService);
+    }, [selectedService]);
 
-    const serviceOptions = [
-        {
-            group: 'Repairs', items: [
-                'Diagnostic Assessment',
-                'Motor Repair/Replacement',
-                'Belt Replacement',
-                'Electrical Fault Repair',
-                'Speaker Repair/Replacement',
-                'Stylus/Cartridge Replacement',
-            ]
-        },
-        {
-            group: 'Restoration', items: [
-                'Full Mechanical Restoration',
-                'Cabinet Re-covering',
-                'Full Restoration (Mechanical + Re-cover)',
-            ]
-        },
-        {
-            group: 'Servicing', items: [
-                'Basic Service (clean, lubricate, test)',
-                'Full Service (basic + belt + stylus check)',
-            ]
-        },
-    ];
-
-    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        if (e.target.files) {
-            setFiles(e.target.files);
-        }
-    };
+    const uniqueServiceOptions = useMemo(
+        () => Array.from(new Set(serviceOptions)).sort((left, right) => left.localeCompare(right)),
+        [serviceOptions],
+    );
 
     return (
-        <section id="contact" className="contact">
-            <div className="contact-container">
-                <div className="contact-info">
-                    <span className="section-label">Get In Touch</span>
-                    <h2>Ready to Restore Your Player?</h2>
+        <section id="contact" className="contact" aria-labelledby="contact-heading">
+            <div className="contact__inner">
+                <div className="contact__intro">
+                    <span className="section-label">Get in touch</span>
+                    <h2 id="contact-heading">Tell Gary what you have, what it is doing and how you want to ship it.</h2>
                     <p>
-                        Have a vintage record player that needs some love? Send me the details
-                        and I'll get back to you with a quote. The more information you can
-                        provide, the more accurate my estimate will be.
+                        Use the form for repair enquiries, restoration bookings or questions about a shop listing. Netlify will capture the
+                        submission and can forward notifications to your Porkbun-hosted email inbox.
                     </p>
-                    <div className="contact-details">
-                        <div className="contact-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                                <circle cx="12" cy="10" r="3" />
-                            </svg>
-                            <span>West Yorkshire, UK</span>
+
+                    <dl className="contact__details">
+                        <div>
+                            <dt>Location</dt>
+                            <dd>{contact.location}</dd>
                         </div>
-                        <div className="contact-item">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <circle cx="12" cy="12" r="10" />
-                                <polyline points="12 6 12 12 16 14" />
-                            </svg>
-                            <span>Usually respond within 24 hours</span>
+                        <div>
+                            <dt>Response time</dt>
+                            <dd>{contact.responseTime}</dd>
                         </div>
-                    </div>
+                        {contact.email ? (
+                            <div>
+                                <dt>Email</dt>
+                                <dd><a href={`mailto:${contact.email}`}>{contact.email}</a></dd>
+                            </div>
+                        ) : null}
+                        {contact.phone ? (
+                            <div>
+                                <dt>Phone</dt>
+                                <dd><a href={`tel:${contact.phone}`}>{contact.phone}</a></dd>
+                            </div>
+                        ) : null}
+                    </dl>
+
+                    {contact.emailSetupNote ? <p className="contact__note">{contact.emailSetupNote}</p> : null}
                 </div>
+
                 <form
-                    className="contact-form"
+                    className="contact__form"
                     name="enquiry"
                     method="POST"
                     data-netlify="true"
@@ -83,89 +70,85 @@ function Contact({ selectedService }: ContactProps) {
                     <input type="hidden" name="form-name" value="enquiry" />
                     <input type="hidden" name="bot-field" />
 
-                    <div className="form-row">
-                        <div className="form-group">
-                            <label htmlFor="name">Your Name</label>
-                            <input type="text" id="name" name="name" required />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">Email Address</label>
-                            <input type="email" id="email" name="email" required />
-                        </div>
+                    <div className="contact__row">
+                        <label>
+                            <span>Your name</span>
+                            <input type="text" name="name" autoComplete="name" required />
+                        </label>
+                        <label>
+                            <span>Email address</span>
+                            <input type="email" name="email" autoComplete="email" required />
+                        </label>
                     </div>
-                    <div className="form-row">
-                        <div className="form-group">
-                            <label htmlFor="phone">Phone (optional)</label>
-                            <input type="tel" id="phone" name="phone" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="player">Brand and Model</label>
-                            <input
-                                type="text"
-                                id="player"
-                                name="player"
-                                placeholder="e.g. Dansette Monarch"
-                            />
-                        </div>
+
+                    <div className="contact__row">
+                        <label>
+                            <span>Phone</span>
+                            <input type="tel" name="phone" autoComplete="tel" />
+                        </label>
+                        <label>
+                            <span>Player brand and model</span>
+                            <input type="text" name="player" placeholder="For example, Dansette Monarch" />
+                        </label>
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="service">Service Required</label>
-                        <select
-                            id="service"
-                            name="service"
-                            value={service}
-                            onChange={(e) => setManualService(e.target.value)}
-                            required
-                        >
-                            <option value="">-- Select a service --</option>
-                            {serviceOptions.map((group) => (
-                                <optgroup label={group.group} key={group.group}>
-                                    {group.items.map((item) => (
-                                        <option value={item} key={item}>{item}</option>
-                                    ))}
-                                </optgroup>
+
+                    <label>
+                        <span>Service or item</span>
+                        <select name="service" value={manualService} onChange={(event) => setManualService(event.target.value)} required>
+                            <option value="">Select a service or listing</option>
+                            {uniqueServiceOptions.map((option) => (
+                                <option key={option} value={option}>{option}</option>
                             ))}
-                            <option value="Other">Other (please describe below)</option>
+                            <option value="Other">Other</option>
                         </select>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="message">Tell Me More</label>
+                    </label>
+
+                    <fieldset className="contact__fieldset">
+                        <legend>Shipping preference</legend>
+                        <label className="contact__radio">
+                            <input type="radio" name="shipping_option" value="I will arrange shipping" defaultChecked />
+                            <span>I will arrange shipping or drop-off</span>
+                        </label>
+                        <label className="contact__radio">
+                            <input type="radio" name="shipping_option" value="I want courier collection included" />
+                            <span>I want the courier-included option</span>
+                        </label>
+                    </fieldset>
+
+                    <label>
+                        <span>Tell me more</span>
                         <textarea
-                            id="message"
                             name="message"
-                            rows={5}
-                            placeholder="Describe the issues, any history you know, what you'd like done..."
+                            rows={6}
+                            placeholder="Describe the fault, any known history, and whether this is a repair, restoration or purchase enquiry."
                             required
                         ></textarea>
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="photos">Photos (optional)</label>
-                        <div className="file-upload">
+                    </label>
+
+                    <label>
+                        <span>Photos</span>
+                        <div className="contact__upload">
                             <input
                                 type="file"
-                                id="photos"
                                 name="photos"
                                 accept=".jpg,.jpeg,.png,.gif,.webp"
                                 multiple
-                                onChange={handleFileChange}
+                                onChange={(event) => setFiles(event.target.files)}
+                                aria-describedby="photo-help photo-status"
                             />
-                            <div className="file-upload-label">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                                    <polyline points="17 8 12 3 7 8" />
-                                    <line x1="12" y1="3" x2="12" y2="15" />
-                                </svg>
-                                <span>
+                            <div>
+                                <strong>Upload current photos of the player</strong>
+                                <p id="photo-help">JPG, PNG, GIF or WebP. Netlify will store them with the enquiry.</p>
+                                <p id="photo-status" aria-live="polite">
                                     {files && files.length > 0
-                                        ? `${files.length} file${files.length > 1 ? 's' : ''} selected`
-                                        : 'Click to upload photos'
-                                    }
-                                </span>
-                                <small>JPG, PNG, GIF or WebP (max 10MB each)</small>
+                                        ? `${files.length} file${files.length === 1 ? '' : 's'} selected`
+                                        : 'No files selected yet'}
+                                </p>
                             </div>
                         </div>
-                    </div>
-                    <button type="submit" className="btn btn-primary btn-full">Send Enquiry</button>
+                    </label>
+
+                    <button type="submit" className="btn btn-primary contact__submit">Send enquiry</button>
                 </form>
             </div>
         </section>

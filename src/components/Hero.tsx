@@ -1,24 +1,49 @@
+import type { GalleryItem, HeroContent } from '../content/content';
 import './Hero.css';
 
-function Hero() {
+interface HeroProps {
+    content: HeroContent;
+    featuredImage?: GalleryItem;
+}
+
+function Hero({ content, featuredImage }: HeroProps) {
     return (
-        <section id="home" className="hero">
-            <div className="hero-overlay"></div>
-            <div className="hero-content">
-                <span className="hero-tagline">West Yorkshire's Vintage Audio Specialist</span>
-                <h1>Bringing Classic Sound<br />Back to Life</h1>
-                <p className="hero-description">
-                    Expert repair and restoration of vintage record players.
-                    From Dansette to Bush, I give these beautiful machines the care they deserve.
-                </p>
-                <div className="hero-buttons">
-                    <a href="#contact" className="btn btn-primary">Request a Quote</a>
-                    <a href="#about" className="btn btn-secondary">Learn More</a>
+        <section className="hero" id="home" aria-labelledby="hero-heading">
+            <div className="hero__grain" aria-hidden="true"></div>
+            <div className="hero__inner">
+                <div className="hero__copy">
+                    <span className="section-label">{content.eyebrow}</span>
+                    <h1 id="hero-heading">{content.headline}</h1>
+                    <p className="hero__description">{content.description}</p>
+                    <div className="hero__actions">
+                        <a className="btn btn-primary" href="#contact">{content.primaryCtaLabel}</a>
+                        <a className="btn btn-secondary" href="/how-it-works">{content.secondaryCtaLabel}</a>
+                    </div>
+                    <ul className="hero__trust-list">
+                        {content.trustPoints.map((point) => (
+                            <li key={point}>{point}</li>
+                        ))}
+                    </ul>
                 </div>
-            </div>
-            <div className="hero-scroll">
-                <span>Scroll to explore</span>
-                <div className="scroll-line"></div>
+
+                <div className="hero__panel">
+                    <div className="hero__record" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div className="hero__image-card">
+                        {featuredImage ? (
+                            <img src={featuredImage.image} alt={featuredImage.alt} />
+                        ) : (
+                            <div className="hero__image-fallback"></div>
+                        )}
+                        <div className="hero__image-caption">
+                            <strong>{featuredImage?.title ?? 'Workshop ready'}</strong>
+                            <span>{featuredImage?.caption ?? 'Repair, restoration and sale preparation handled from one workshop.'}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     );

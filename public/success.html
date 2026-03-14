@@ -1,79 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thank You | Vintage Record Player Repair</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Thank you | Vintage Record Player Repair & Restoration</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
+        :root {
+            color-scheme: light;
+            --ink: #121722;
+            --paper: #f5efe5;
+            --gold: #b7862e;
+        }
+
         * {
-            margin: 0;
-            padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            font-family: 'Source Sans 3', sans-serif;
+            margin: 0;
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #1a1a2e;
-            padding: 20px;
+            display: grid;
+            place-items: center;
+            padding: 1.5rem;
+            font-family: 'Source Sans 3', sans-serif;
+            background: linear-gradient(180deg, #141b27 0%, #1f2938 100%);
+            color: white;
         }
 
-        .success-content {
+        main {
+            width: min(42rem, 100%);
+            padding: 2rem;
+            border-radius: 2rem;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             text-align: center;
-            max-width: 500px;
+            box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
         }
 
-            .success-content svg {
-                color: #c9a227;
-                margin-bottom: 30px;
-            }
+        h1 {
+            margin: 1rem 0 0;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2.4rem, 7vw, 3.6rem);
+        }
 
-            .success-content h1 {
-                font-family: 'Playfair Display', Georgia, serif;
-                color: #ffffff;
-                font-size: 2.5rem;
-                margin-bottom: 20px;
-            }
+        p {
+            margin: 1rem auto 0;
+            max-width: 32rem;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 1.08rem;
+            line-height: 1.6;
+        }
 
-            .success-content p {
-                color: rgba(255, 255, 255, 0.8);
-                font-size: 1.1rem;
-                margin-bottom: 40px;
-                line-height: 1.7;
-            }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 36px;
-            font-size: 1rem;
-            font-weight: 600;
+        a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 3.2rem;
+            margin-top: 2rem;
+            padding: 0 1.4rem;
+            border-radius: 999px;
             text-decoration: none;
-            background-color: #c9a227;
-            color: #1a1a2e;
-            transition: all 0.2s ease;
+            background: var(--gold);
+            color: #16120a;
+            font-weight: 700;
         }
-
-            .btn:hover {
-                background-color: #e0b830;
-                transform: translateY(-3px);
-            }
     </style>
 </head>
 <body>
-    <div class="success-content">
-        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10" />
-            <polyline points="9 12 12 15 16 10" />
+    <main>
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="8 12.5 11 15.5 16.5 9.5"></polyline>
         </svg>
-        <h1>Thank You!</h1>
-        <p>Your enquiry has been sent successfully. I'll get back to you within 24 hours.</p>
-        <a href="/" class="btn">Back to Home</a>
-    </div>
+        <h1>Enquiry sent</h1>
+        <p>Thanks. Your message has been submitted successfully and can be forwarded by Netlify to your Porkbun-hosted mailbox.</p>
+        <a href="/">Back to the website</a>
+    </main>
 </body>
 </html>

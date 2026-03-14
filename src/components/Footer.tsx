@@ -1,24 +1,37 @@
+import type { BrandContent, ContactContent } from '../content/content';
 import Logo from './Logo';
 import './Footer.css';
 
-function Footer() {
+interface FooterProps {
+    brand: BrandContent;
+    contact: ContactContent;
+}
+
+function Footer({ brand, contact }: FooterProps) {
     return (
-        <footer className="footer">
-            <div className="footer-content">
-                <div className="footer-brand">
+        <footer className="site-footer">
+            <div className="site-footer__inner">
+                <div className="site-footer__brand">
                     <Logo light={true} />
-                    <span>Vintage Record Player Repair & Restoration</span>
+                    <div>
+                        <strong>{brand.businessName}</strong>
+                        <p>{brand.tagline}</p>
+                    </div>
                 </div>
-                <div className="footer-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#services">Services</a>
-                    <a href="#gallery">Gallery</a>
+
+                <div className="site-footer__links">
+                    <a href="/">Home</a>
+                    <a href="/how-it-works">How It Works</a>
+                    <a href="/shop">Shop</a>
+                    <a href="/#gallery">Gallery</a>
                     <a href="#contact">Contact</a>
                 </div>
-                <p className="footer-copy">
-                    Copyright {new Date().getFullYear()} Vintage Record Player Repair. All rights reserved.
-                </p>
+
+                <div className="site-footer__meta">
+                    <span>{contact.location}</span>
+                    <span>{brand.responseTime}</span>
+                    <span>Copyright {new Date().getFullYear()} {brand.businessName}</span>
+                </div>
             </div>
         </footer>
     );

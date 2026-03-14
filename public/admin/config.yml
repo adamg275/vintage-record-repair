@@ -6,14 +6,146 @@ media_folder: "public/uploads"
 public_folder: "/uploads"
 
 collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "src/content/site/settings.json"
+        label: "Site Settings"
+        name: "site-settings"
+        format: "json"
+        fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - { label: "Site name", name: "siteName", widget: "string" }
+              - { label: "Default title", name: "defaultTitle", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Site URL", name: "siteUrl", widget: "string", required: false }
+              - { label: "Keywords", name: "keywords", widget: "list", required: false }
+              - { label: "Open Graph image", name: "ogImage", widget: "image", required: false }
+          - label: "Brand"
+            name: "brand"
+            widget: "object"
+            fields:
+              - { label: "Business name", name: "businessName", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Service area", name: "serviceArea", widget: "string" }
+              - { label: "Response time", name: "responseTime", widget: "string" }
+              - { label: "eBay URL", name: "ebayUrl", widget: "string", required: false }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Primary CTA label", name: "primaryCtaLabel", widget: "string" }
+              - { label: "Secondary CTA label", name: "secondaryCtaLabel", widget: "string" }
+              - { label: "Trust points", name: "trustPoints", widget: "list" }
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image alt text", name: "imageAlt", widget: "string" }
+          - { label: "Specialisms", name: "specialisms", widget: "list" }
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Response time", name: "responseTime", widget: "string" }
+              - { label: "Email", name: "email", widget: "string", required: false }
+              - { label: "Phone", name: "phone", widget: "string", required: false }
+              - { label: "Email setup note", name: "emailSetupNote", widget: "text", required: false }
+
+  - name: "services"
+    label: "Services and Workflow"
+    files:
+      - file: "src/content/site/services.json"
+        label: "Services and Workflow"
+        name: "services-workflow"
+        format: "json"
+        fields:
+          - label: "Service categories"
+            name: "categories"
+            widget: "list"
+            fields:
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Price", name: "price", widget: "string" }
+                  - { label: "Summary", name: "summary", widget: "text" }
+          - { label: "Service note", name: "note", widget: "text" }
+          - label: "Process steps"
+            name: "processSteps"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Service plans"
+            name: "servicePlans"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Starting price", name: "startingPrice", widget: "string" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Includes", name: "includes", widget: "list" }
+              - label: "Options"
+                name: "options"
+                widget: "list"
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Price", name: "price", widget: "string" }
+                  - { label: "Summary", name: "summary", widget: "text" }
+                  - { label: "Prefill service", name: "prefillService", widget: "string" }
+          - { label: "Shipping note", name: "shippingNote", widget: "text" }
+
   - name: "gallery"
     label: "Gallery"
     folder: "src/content/gallery"
     create: true
+    format: "json"
+    extension: "json"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image alt text", name: "alt", widget: "string" }
       - { label: "Caption", name: "caption", widget: "string", required: false }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Show on website", name: "showOnWebsite", widget: "boolean", default: true }
+
+  - name: "listings"
+    label: "Shop Listings"
+    folder: "src/content/listings"
+    create: true
+    format: "json"
+    extension: "json"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Price", name: "price", widget: "string" }
+      - label: "Status"
+        name: "status"
+        widget: "select"
+        options: ["available", "reserved", "sold"]
+      - { label: "Condition", name: "condition", widget: "string" }
+      - { label: "Era", name: "era", widget: "string" }
+      - { label: "Short description", name: "shortDescription", widget: "text" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image alt text", name: "alt", widget: "string" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Show on website", name: "showOnWebsite", widget: "boolean", default: true }
+      - { label: "Checkout URL", name: "checkoutUrl", widget: "string", required: false, hint: "Add a PayPal checkout link to enable direct purchase." }
+
