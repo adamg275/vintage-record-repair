@@ -57,7 +57,7 @@ function Gallery({ items }: GalleryProps) {
                     <div className="gallery__lightbox-panel" onClick={(event) => event.stopPropagation()}>
                         <button type="button" className="gallery__lightbox-close" onClick={() => setSelectedImage(null)}>
                             <span className="sr-only">Close gallery image</span>
-                            ×
+                            <span aria-hidden="true">X</span>
                         </button>
                         <img src={selectedImage.image} alt={selectedImage.alt} />
                         <div className="gallery__lightbox-copy">

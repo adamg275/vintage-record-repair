@@ -48,7 +48,7 @@ function Shop({ listings, onSelectService }: ShopProps) {
                                     <h2>{listing.title}</h2>
                                     <span>{listing.price}</span>
                                 </div>
-                                <p className="shop-card__meta">{listing.era} · {listing.condition}</p>
+                                <p className="shop-card__meta">{listing.era} | {listing.condition}</p>
                                 <p>{listing.shortDescription}</p>
                                 <p className="shop-card__description">{listing.description}</p>
                                 <div className="shop-card__actions">
