@@ -5,28 +5,23 @@
       "description": "Targeted work when the fault is fairly clear.",
       "items": [
         {
-          "name": "Diagnostic assessment",
-          "price": "Free with repair",
-          "summary": "Initial bench testing to identify the fault and confirm the most sensible next step."
-        },
-        {
           "name": "Motor repair or replacement",
-          "price": "From \u00A340",
+          "price": "Enquire",
           "summary": "Motor strip-down, lubrication and replacement work where the original unit cannot be saved."
         },
         {
           "name": "Belt or idler service",
-          "price": "From \u00A315",
+          "price": "Enquire",
           "summary": "Replacement of worn drive parts, followed by speed and running checks."
         },
         {
           "name": "Electrical fault repair",
-          "price": "From \u00A330",
+          "price": "Enquire",
           "summary": "Investigation and repair of amplifier, switch, wiring and power-related faults."
         },
         {
           "name": "Speaker, stylus or cartridge replacement",
-          "price": "From \u00A320",
+          "price": "Enquire",
           "summary": "Common playback parts replaced where age or wear is affecting performance."
         }
       ]
@@ -37,17 +32,17 @@
       "items": [
         {
           "name": "Full mechanical restoration",
-          "price": "From \u00A3120",
+          "price": "Enquire",
           "summary": "A more complete overhaul for players that need reliability rather than a quick patch."
         },
         {
           "name": "Cabinet re-covering",
-          "price": "From \u00A380",
+          "price": "Enquire",
           "summary": "Fresh cabinet finish while keeping the look sympathetic to the period."
         },
         {
           "name": "Full restoration with re-cover",
-          "price": "From \u00A3180",
+          "price": "From £180",
           "summary": "Combined mechanical and cosmetic restoration for machines worth fully reviving."
         }
       ]
@@ -57,13 +52,8 @@
       "description": "Routine maintenance for players that still work but need attention.",
       "items": [
         {
-          "name": "Basic service",
-          "price": "\u00A335",
-          "summary": "Cleaning, lubrication, safety checks and a practical playback test."
-        },
-        {
           "name": "Full service",
-          "price": "\u00A355",
+          "price": "Enquire",
           "summary": "A more thorough service including setup checks on key wear items."
         }
       ]
@@ -91,7 +81,7 @@
   "servicePlans": [
     {
       "name": "Workshop assessment",
-      "startingPrice": "From \u00A335",
+      "startingPrice": "From £35",
       "summary": "A sensible starting point if you know something is wrong but do not yet know the cause.",
       "includes": [
         "Bench diagnosis and initial safety review",
@@ -101,13 +91,13 @@
       "options": [
         {
           "name": "You handle shipping",
-          "price": "From \u00A335",
+          "price": "From £35",
           "summary": "You drop off the player yourself or arrange delivery to Gary.",
           "prefillService": "Workshop assessment - self shipping"
         },
         {
           "name": "Courier included",
-          "price": "From \u00A365",
+          "price": "From £65",
           "summary": "Collection and return are arranged with you as part of the booking.",
           "prefillService": "Workshop assessment - courier included"
         }
@@ -115,7 +105,7 @@
     },
     {
       "name": "Service and setup",
-      "startingPrice": "From \u00A355",
+      "startingPrice": "From £55",
       "summary": "Ideal for working players that need dependable everyday use again.",
       "includes": [
         "Cleaning, lubrication and setup checks",
@@ -125,13 +115,13 @@
       "options": [
         {
           "name": "You handle shipping",
-          "price": "From \u00A355",
+          "price": "From £55",
           "summary": "You arrange delivery or drop-off and Gary handles the workshop side from there.",
           "prefillService": "Service and setup - self shipping"
         },
         {
           "name": "Courier included",
-          "price": "From \u00A395",
+          "price": "From £95",
           "summary": "Gary helps arrange collection so the transport side is handled for you.",
           "prefillService": "Service and setup - courier included"
         }
@@ -139,7 +129,7 @@
     },
     {
       "name": "Full restoration",
-      "startingPrice": "From \u00A3180",
+      "startingPrice": "From £180",
       "summary": "For worthwhile machines that need proper mechanical attention and cosmetic improvement.",
       "includes": [
         "Mechanical restoration and testing",
@@ -149,13 +139,13 @@
       "options": [
         {
           "name": "You handle shipping",
-          "price": "From \u00A3180",
-          "summary": "You manage the journey to the workshop and Gary handles the restoration work."
-          ,"prefillService": "Full restoration - self shipping"
+          "price": "From £180",
+          "summary": "You manage the journey to the workshop and Gary handles the restoration work.",
+          "prefillService": "Full restoration - self shipping"
         },
         {
           "name": "Courier included",
-          "price": "From \u00A3235",
+          "price": "From £235",
           "summary": "Gary coordinates collection and return alongside the restoration booking.",
           "prefillService": "Full restoration - courier included"
         }
