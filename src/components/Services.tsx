@@ -10,11 +10,11 @@ function Services({ content, onSelectService }: ServicesProps) {
     return (
         <section id="services" className="services" aria-labelledby="services-heading">
             <div className="services__header">
-                <span className="section-label">Services and pricing</span>
+                <span className="section-label">Services</span>
                 <h2 id="services-heading">Repair work that starts with the right level of intervention.</h2>
                 <p>
-                    These guide prices help customers understand the shape of the work. Final quotes depend on the player,
-                    its condition and whether collection is needed.
+                    Choose the service that sounds closest to what you need, then use the enquiry button and Gary will come back with the
+                    most sensible route for your player.
                 </p>
             </div>
 
@@ -31,12 +31,11 @@ function Services({ content, onSelectService }: ServicesProps) {
                                     <div>
                                         <div className="services__item-topline">
                                             <span className="services__item-name">{item.name}</span>
-                                            <span className="services__item-price">{item.price}</span>
                                         </div>
                                         <p>{item.summary}</p>
                                     </div>
                                     <button type="button" className="services__button" onClick={() => onSelectService(item.name)}>
-                                        Enquire
+                                        Enquire about this service
                                     </button>
                                 </li>
                             ))}

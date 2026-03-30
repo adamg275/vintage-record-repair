@@ -9,28 +9,48 @@ interface ContactProps {
 }
 
 function buildPrefilledMessage(service: string) {
+    if (!service) {
+        return '';
+    }
+
     if (service.startsWith('Shop item: ')) {
         const itemTitle = service.replace('Shop item: ', '');
         return `I am enquiring about ${itemTitle}. Please let me know if it is still available, the overall condition, and the delivery or collection options.`;
     }
 
-    return '';
+    return `I am enquiring about ${service}. Please let me know the next steps, likely turnaround time, and anything you need from me before the player is sent or dropped off.`;
+}
+
+function buildShippingOption(service: string) {
+    if (service.toLowerCase().includes('courier included')) {
+        return 'I want courier collection included';
+    }
+
+    return 'I will arrange shipping';
 }
 
 function Contact({ selectedService, serviceOptions, contact }: ContactProps) {
     const [manualService, setManualService] = useState(selectedService);
     const [message, setMessage] = useState(() => buildPrefilledMessage(selectedService));
+    const [shippingOption, setShippingOption] = useState(() => buildShippingOption(selectedService));
     const [files, setFiles] = useState<FileList | null>(null);
 
     useEffect(() => {
         setManualService(selectedService);
         setMessage(buildPrefilledMessage(selectedService));
+        setShippingOption(buildShippingOption(selectedService));
     }, [selectedService]);
 
     const uniqueServiceOptions = useMemo(
         () => Array.from(new Set(serviceOptions)).sort((left, right) => left.localeCompare(right)),
         [serviceOptions],
     );
+
+    const handleServiceChange = (service: string) => {
+        setManualService(service);
+        setMessage(buildPrefilledMessage(service));
+        setShippingOption(buildShippingOption(service));
+    };
 
     return (
         <section id="contact" className="contact" aria-labelledby="contact-heading">
@@ -105,7 +125,7 @@ function Contact({ selectedService, serviceOptions, contact }: ContactProps) {
 
                     <label>
                         <span>Service or item</span>
-                        <select name="service" value={manualService} onChange={(event) => setManualService(event.target.value)} required>
+                        <select name="service" value={manualService} onChange={(event) => handleServiceChange(event.target.value)} required>
                             <option value="">Select a service or listing</option>
                             {uniqueServiceOptions.map((option) => (
                                 <option key={option} value={option}>{option}</option>
@@ -117,11 +137,23 @@ function Contact({ selectedService, serviceOptions, contact }: ContactProps) {
                     <fieldset className="contact__fieldset">
                         <legend>Shipping preference</legend>
                         <label className="contact__radio">
-                            <input type="radio" name="shipping_option" value="I will arrange shipping" defaultChecked />
+                            <input
+                                type="radio"
+                                name="shipping_option"
+                                value="I will arrange shipping"
+                                checked={shippingOption === 'I will arrange shipping'}
+                                onChange={(event) => setShippingOption(event.target.value)}
+                            />
                             <span>I will arrange shipping or drop-off</span>
                         </label>
                         <label className="contact__radio">
-                            <input type="radio" name="shipping_option" value="I want courier collection included" />
+                            <input
+                                type="radio"
+                                name="shipping_option"
+                                value="I want courier collection included"
+                                checked={shippingOption === 'I want courier collection included'}
+                                onChange={(event) => setShippingOption(event.target.value)}
+                            />
                             <span>I want the courier-included option</span>
                         </label>
                     </fieldset>

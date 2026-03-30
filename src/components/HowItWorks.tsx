@@ -13,8 +13,8 @@ function HowItWorks({ content, onSelectService }: HowItWorksProps) {
                 <span className="section-label">How it works</span>
                 <h1 id="workflow-heading">Choose the right service, then decide whether Gary arranges the courier.</h1>
                 <p>
-                    The workflow is designed to be simple for buyers: pick the level of work, choose the lower self-shipping route or a higher
-                    courier-included price, then confirm the plan before the job begins.
+                    The workflow is designed to be simple for buyers: pick the level of work, decide whether you will ship the player yourself
+                    or want collection arranged, then send an enquiry for the option that fits best.
                 </p>
             </div>
 
@@ -32,7 +32,6 @@ function HowItWorks({ content, onSelectService }: HowItWorksProps) {
                 {content.servicePlans.map((plan) => (
                     <article className="workflow-plan" key={plan.name}>
                         <div className="workflow-plan__header">
-                            <span>{plan.startingPrice}</span>
                             <h2>{plan.name}</h2>
                             <p>{plan.summary}</p>
                         </div>
@@ -45,8 +44,8 @@ function HowItWorks({ content, onSelectService }: HowItWorksProps) {
                             {plan.options.map((option) => (
                                 <button type="button" key={option.prefillService} onClick={() => onSelectService(option.prefillService)}>
                                     <strong>{option.name}</strong>
-                                    <span>{option.price}</span>
                                     <small>{option.summary}</small>
+                                    <span>Enquire about this option</span>
                                 </button>
                             ))}
                         </div>

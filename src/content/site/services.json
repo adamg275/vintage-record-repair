@@ -77,7 +77,7 @@
     },
     {
       "title": "Decide how the player will travel",
-      "description": "Choose the lower self-shipping price or the higher courier-included option if you want collection arranged for you."
+      "description": "Choose self-shipping or ask Gary to arrange courier collection for you."
     },
     {
       "title": "Approve the plan before extra work",
@@ -108,7 +108,7 @@
         {
           "name": "Courier included",
           "price": "From \u00A365",
-          "summary": "A higher bundled price for customers who want collection organised.",
+          "summary": "Collection and return are arranged with you as part of the booking.",
           "prefillService": "Workshop assessment - courier included"
         }
       ]
@@ -126,13 +126,13 @@
         {
           "name": "You handle shipping",
           "price": "From \u00A355",
-          "summary": "The lower price if you arrange delivery or drop-off yourself.",
+          "summary": "You arrange delivery or drop-off and Gary handles the workshop side from there.",
           "prefillService": "Service and setup - self shipping"
         },
         {
           "name": "Courier included",
           "price": "From \u00A395",
-          "summary": "A higher bundled price if you want collection arranged for the job.",
+          "summary": "Gary helps arrange collection so the transport side is handled for you.",
           "prefillService": "Service and setup - courier included"
         }
       ]
@@ -150,17 +150,17 @@
         {
           "name": "You handle shipping",
           "price": "From \u00A3180",
-          "summary": "The lower restoration price when the customer manages transport.",
-          "prefillService": "Full restoration - self shipping"
+          "summary": "You manage the journey to the workshop and Gary handles the restoration work."
+          ,"prefillService": "Full restoration - self shipping"
         },
         {
           "name": "Courier included",
           "price": "From \u00A3235",
-          "summary": "A higher bundled option with collection and return delivery planning included.",
+          "summary": "Gary coordinates collection and return alongside the restoration booking.",
           "prefillService": "Full restoration - courier included"
         }
       ]
     }
   ],
-  "shippingNote": "Courier pricing depends on the player size, destination and packing requirements. Final transport costs are confirmed before collection is booked."
+  "shippingNote": "Courier availability depends on the player size, destination and packing requirements. Final transport arrangements are confirmed before collection is booked."
 }

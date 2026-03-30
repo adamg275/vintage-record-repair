@@ -1,15 +1,15 @@
 {
-  "shortDescription": "A well-presented portable player prepared for someone who wants a vintage machine they can enjoy rather than repair.",
-  "price": "£325",
-  "alt": "1960s Dansette Major record player prepared for sale",
-  "checkoutUrl": "",
   "slug": "1960s-dansette-major",
-  "featured": true,
-  "status": "available",
-  "era": "1960s",
   "title": "1960s Dansette Major",
+  "price": "\u00A3325",
+  "status": "available",
   "condition": "Serviced and ready to use",
+  "era": "1960s",
+  "shortDescription": "A well-presented portable player prepared for someone who wants a vintage machine they can enjoy rather than repair.",
+  "description": "Serviced, tested and photographed as the actual item for sale. Use the enquiry button if you would like more detail, current availability or delivery information.",
   "image": "/uploads/dansette.jpg",
-  "description": "Serviced, tested and photographed as the actual item for sale. Ideal for buyers who want the look and character of a classic portable player without taking on a restoration project first.",
-  "showOnWebsite": true
+  "alt": "1960s Dansette Major record player prepared for sale",
+  "featured": true,
+  "showOnWebsite": true,
+  "checkoutUrl": ""
 }
