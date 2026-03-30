@@ -27,7 +27,8 @@ function Header({ currentPath }: HeaderProps) {
         return () => document.body.classList.remove('menu-open');
     }, [isOpen]);
 
-    const isTransparent = currentPath === '/' && !isScrolled;
+    const hasPhaseNotice = currentPath === '/' && Boolean(siteSettings.setupPhase?.enabled);
+    const isTransparent = currentPath === '/' && !isScrolled && !hasPhaseNotice;
     const links = [
         { href: '/', label: 'Home', isCurrent: currentPath === '/' },
         { href: '/how-it-works', label: 'How It Works', isCurrent: currentPath === '/how-it-works' },
