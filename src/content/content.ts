@@ -39,6 +39,12 @@ export interface ContactContent {
     emailSetupNote?: string;
 }
 
+export interface SetupPhaseContent {
+    enabled: boolean;
+    headline: string;
+    message: string;
+}
+
 export interface SiteSettings {
     seo: SeoContent;
     brand: BrandContent;
@@ -46,6 +52,7 @@ export interface SiteSettings {
     about: AboutContent;
     specialisms: string[];
     contact: ContactContent;
+    setupPhase?: SetupPhaseContent;
 }
 
 export interface ServiceItem {

@@ -8,17 +8,27 @@ interface ContactProps {
     contact: ContactContent;
 }
 
+function normalizeServiceLabel(service: string) {
+    if (service.startsWith('Shop item: ')) {
+        return service;
+    }
+
+    return service.replace(/\s*-\s*(self shipping|courier included)$/i, '');
+}
+
 function buildPrefilledMessage(service: string) {
-    if (!service) {
+    const normalizedService = normalizeServiceLabel(service);
+
+    if (!normalizedService) {
         return '';
     }
 
-    if (service.startsWith('Shop item: ')) {
-        const itemTitle = service.replace('Shop item: ', '');
+    if (normalizedService.startsWith('Shop item: ')) {
+        const itemTitle = normalizedService.replace('Shop item: ', '');
         return `I am enquiring about ${itemTitle}. Please let me know if it is still available, the overall condition, and the delivery or collection options.`;
     }
 
-    return `I am enquiring about ${service}. Please let me know the next steps, likely turnaround time, and anything you need from me before the player is sent or dropped off.`;
+    return `I am enquiring about ${normalizedService}. Please let me know the next steps, likely turnaround time, and anything you need from me before the player is sent or dropped off.`;
 }
 
 function buildShippingOption(service: string) {
@@ -30,13 +40,13 @@ function buildShippingOption(service: string) {
 }
 
 function Contact({ selectedService, serviceOptions, contact }: ContactProps) {
-    const [manualService, setManualService] = useState(selectedService);
+    const [manualService, setManualService] = useState(() => normalizeServiceLabel(selectedService));
     const [message, setMessage] = useState(() => buildPrefilledMessage(selectedService));
     const [shippingOption, setShippingOption] = useState(() => buildShippingOption(selectedService));
     const [files, setFiles] = useState<FileList | null>(null);
 
     useEffect(() => {
-        setManualService(selectedService);
+        setManualService(normalizeServiceLabel(selectedService));
         setMessage(buildPrefilledMessage(selectedService));
         setShippingOption(buildShippingOption(selectedService));
     }, [selectedService]);
@@ -59,8 +69,8 @@ function Contact({ selectedService, serviceOptions, contact }: ContactProps) {
                     <span className="section-label">Get in touch</span>
                     <h2 id="contact-heading">Tell Gary which player, service or sale item you want to discuss.</h2>
                     <p>
-                        Use the form for repair enquiries, restoration bookings or questions about a shop listing. Netlify captures the
-                        submission and forwards the details to Gary by email.
+                        The website and business are still being set up, so not everything here is final yet. Even so, enquiries are welcome
+                        and Gary will come back honestly about what he can realistically fit in and help with.
                     </p>
 
                     <dl className="contact__details">

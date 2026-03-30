@@ -61,6 +61,13 @@ collections:
               - { label: "Email", name: "email", widget: "string", required: false }
               - { label: "Phone", name: "phone", widget: "string", required: false }
               - { label: "Email setup note", name: "emailSetupNote", widget: "text", required: false }
+          - label: "Setup phase notice"
+            name: "setupPhase"
+            widget: "object"
+            fields:
+              - { label: "Enabled", name: "enabled", widget: "boolean", default: true }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Message", name: "message", widget: "text" }
 
   - name: "services"
     label: "Services and Workflow"
@@ -148,4 +155,3 @@ collections:
       - { label: "Featured", name: "featured", widget: "boolean", default: false }
       - { label: "Show on website", name: "showOnWebsite", widget: "boolean", default: true }
       - { label: "Checkout URL", name: "checkoutUrl", widget: "string", required: false, hint: "Add a PayPal checkout link to enable direct purchase." }
-

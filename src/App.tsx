@@ -19,6 +19,14 @@ function normalisePath(pathname: string) {
     return pathname.replace(/\/$/, '');
 }
 
+function normalizeServiceLabel(service: string) {
+    if (service.startsWith('Shop item: ')) {
+        return service;
+    }
+
+    return service.replace(/\s*-\s*(self shipping|courier included)$/i, '');
+}
+
 function scrollToHash(hash: string) {
     if (!hash) {
         return;
@@ -60,9 +68,9 @@ function App() {
     const serviceOptions = useMemo(
         () => [
             ...servicesContent.categories.flatMap((category) => category.items.map((item) => item.name)),
-            ...servicesContent.servicePlans.flatMap((plan) => plan.options.map((option) => option.prefillService)),
+            ...servicesContent.servicePlans.map((plan) => plan.name),
             ...shopListings.map((listing) => `Shop item: ${listing.title}`),
-        ],
+        ].map(normalizeServiceLabel),
         [],
     );
 
@@ -71,12 +79,12 @@ function App() {
             case '/how-it-works':
                 return {
                     title: `How It Works | ${siteSettings.seo.defaultTitle}`,
-                    description: 'Choose a repair or restoration service, compare self-shipping against courier-included pricing and book the right route for your player.',
+                    description: 'Choose a repair or restoration service, decide how the player will travel, and send an enquiry for the option that suits you best.',
                 };
             case '/shop':
                 return {
                     title: `Shop | ${siteSettings.seo.defaultTitle}`,
-                    description: 'Browse restored and previously sold vintage record players with editable descriptions, images and optional PayPal checkout links.',
+                    description: 'Browse restored and previously sold vintage record players and send a direct enquiry for the item you want to discuss.',
                 };
             default:
                 return {
@@ -149,6 +157,15 @@ function App() {
             <a className="skip-link" href="#main-content">Skip to main content</a>
             <Header currentPath={currentPath} />
             <main id="main-content">
+                {siteSettings.setupPhase?.enabled ? (
+                    <section className="phase-notice" aria-label="Setup phase notice">
+                        <div className="phase-notice__inner">
+                            <strong>{siteSettings.setupPhase.headline}</strong>
+                            <p>{siteSettings.setupPhase.message}</p>
+                        </div>
+                    </section>
+                ) : null}
+
                 {showHome ? (
                     <>
                         <Hero content={siteSettings.hero} featuredImage={featuredGalleryImage} />
