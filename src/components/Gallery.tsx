@@ -28,10 +28,10 @@ function Gallery({ items }: GalleryProps) {
         <section id="gallery" className="gallery" aria-labelledby="gallery-heading">
             <div className="gallery__header">
                 <span className="section-label">Recent work</span>
-                <h2 id="gallery-heading">Gallery images now come straight from Decap uploads.</h2>
+                <h2 id="gallery-heading">Examples of the finish, presentation and workshop work behind each player.</h2>
                 <p>
-                    Add or remove gallery entries in the CMS and this section updates automatically using the uploaded image path,
-                    title, alt text and caption.
+                    Browse recent restorations and sale preparation work for a better sense of the standards, materials and overall look
+                    Gary is aiming for.
                 </p>
             </div>
 

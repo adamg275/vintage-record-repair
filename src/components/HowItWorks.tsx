@@ -11,10 +11,10 @@ function HowItWorks({ content, onSelectService }: HowItWorksProps) {
         <section className="workflow-page" aria-labelledby="workflow-heading">
             <div className="page-intro page-intro--narrow">
                 <span className="section-label">How it works</span>
-                <h1 id="workflow-heading">Choose the right service, then decide whether Gary arranges the courier.</h1>
+                <h1 id="workflow-heading">A clear route from first enquiry to a player ready to return.</h1>
                 <p>
-                    The workflow is designed to be simple for buyers: pick the level of work, decide whether you will ship the player yourself
-                    or want collection arranged, then send an enquiry for the option that fits best.
+                    Start with the type of help you need, decide whether you will send the player yourself or want collection discussed,
+                    and Gary will confirm the most sensible route from there.
                 </p>
             </div>
 
@@ -45,7 +45,7 @@ function HowItWorks({ content, onSelectService }: HowItWorksProps) {
                                 <button type="button" key={option.prefillService} onClick={() => onSelectService(option.prefillService)}>
                                     <strong>{option.name}</strong>
                                     <small>{option.summary}</small>
-                                    <span>Enquire about this option</span>
+                                    <span>Ask about this route</span>
                                 </button>
                             ))}
                         </div>

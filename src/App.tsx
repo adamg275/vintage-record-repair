@@ -79,12 +79,12 @@ function App() {
             case '/how-it-works':
                 return {
                     title: `How It Works | ${siteSettings.seo.defaultTitle}`,
-                    description: 'Choose a repair or restoration service, decide how the player will travel, and send an enquiry for the option that suits you best.',
+                    description: 'Find out how enquiries, workshop assessments, transport discussions and return delivery are handled.',
                 };
             case '/shop':
                 return {
                     title: `Shop | ${siteSettings.seo.defaultTitle}`,
-                    description: 'Browse restored and previously sold vintage record players and send a direct enquiry for the item you want to discuss.',
+                    description: 'Browse finished players, previous sales and restored stock, then enquire about the item you want to discuss.',
                 };
             default:
                 return {
@@ -168,7 +168,7 @@ function App() {
 
                 {showHome ? (
                     <>
-                        <Hero content={siteSettings.hero} featuredImage={featuredGalleryImage} />
+                        <Hero content={siteSettings.hero} featuredImage={featuredGalleryImage} specialisms={siteSettings.specialisms} />
                         <About content={siteSettings.about} specialisms={siteSettings.specialisms} ebayUrl={siteSettings.brand.ebayUrl} />
                         <Services content={servicesContent} onSelectService={handleSelectService} />
                         <Gallery items={galleryItems} />

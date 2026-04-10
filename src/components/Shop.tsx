@@ -24,10 +24,10 @@ function Shop({ listings, onSelectService }: ShopProps) {
         <section className="shop-page" aria-labelledby="shop-heading">
             <div className="page-intro">
                 <span className="section-label">Webshop</span>
-                <h1 id="shop-heading">Restored players for sale, with honest descriptions and a direct enquiry route.</h1>
+                <h1 id="shop-heading">Finished players, previous sales and stock worth asking about.</h1>
                 <p>
-                    Each listing is managed through Decap CMS, so photographs, condition notes and availability stay current.
-                    Use the enquiry button on any listing and the contact form will be prefilled for that exact item.
+                    This page shows the kind of machines Gary prepares and the standard of finish to expect. If something catches your eye,
+                    send an enquiry and the form will be filled in for that exact player.
                 </p>
             </div>
 
@@ -51,7 +51,7 @@ function Shop({ listings, onSelectService }: ShopProps) {
                                 <p className="shop-card__description">{listing.description}</p>
                                 <div className="shop-card__actions">
                                     <button type="button" className="btn btn-primary" onClick={() => onSelectService(enquiryLabel)}>
-                                        {isAvailable ? 'Enquire about this player' : 'Enquire about similar stock'}
+                                        {isAvailable ? 'Ask about this player' : 'Ask about similar stock'}
                                     </button>
                                 </div>
                             </div>

@@ -35,7 +35,7 @@ function About({ content, specialisms, ebayUrl }: AboutProps) {
 
                     {ebayUrl ? (
                         <a href={ebayUrl} target="_blank" rel="noreferrer" className="about__link">
-                            Browse recent eBay sales
+                            View previous sales and finished restorations
                         </a>
                     ) : null}
                 </div>

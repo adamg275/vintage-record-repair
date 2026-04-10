@@ -11,10 +11,10 @@ function Services({ content, onSelectService }: ServicesProps) {
         <section id="services" className="services" aria-labelledby="services-heading">
             <div className="services__header">
                 <span className="section-label">Services</span>
-                <h2 id="services-heading">Repair work that starts with the right level of intervention.</h2>
+                <h2 id="services-heading">Workshop help for fault finding, servicing and full restoration.</h2>
                 <p>
-                    Choose the service that sounds closest to what you need, then use the enquiry button and Gary will come back with the
-                    most sensible route for your player.
+                    If your player needs attention, choose the service that sounds closest to the problem and send an enquiry.
+                    Gary will reply within three working days with the next sensible step.
                 </p>
             </div>
 
@@ -45,7 +45,7 @@ function Services({ content, onSelectService }: ServicesProps) {
             </div>
 
             <div className="services__note">
-                <strong>Good workshop practice:</strong>
+                <strong>Workshop note:</strong>
                 <p>{content.note}</p>
             </div>
         </section>

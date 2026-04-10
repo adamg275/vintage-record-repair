@@ -4,9 +4,12 @@ import './Hero.css';
 interface HeroProps {
     content: HeroContent;
     featuredImage?: GalleryItem;
+    specialisms: string[];
 }
 
-function Hero({ content, featuredImage }: HeroProps) {
+function Hero({ content, featuredImage, specialisms }: HeroProps) {
+    const reelItems = [...specialisms, 'Workshop assessments', 'Restoration enquiries', 'Sale stock'].filter(Boolean);
+
     return (
         <section className="hero" id="home" aria-labelledby="hero-heading">
             <div className="hero__grain" aria-hidden="true"></div>
@@ -43,6 +46,13 @@ function Hero({ content, featuredImage }: HeroProps) {
                             <span>{featuredImage?.caption ?? 'Repair, restoration and sale preparation handled from one workshop.'}</span>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div className="hero__reel" aria-label="Workshop specialisms">
+                <div className="hero__reel-track">
+                    {[...reelItems, ...reelItems].map((item, index) => (
+                        <span key={`${item}-${index}`}>{item}</span>
+                    ))}
                 </div>
             </div>
         </section>

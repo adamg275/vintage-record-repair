@@ -22,21 +22,21 @@
   },
   "hero": {
     "eyebrow": "Workshop repair, restoration and sale stock",
-    "headline": "Vintage record players, carefully assessed while the business is still taking shape.",
-    "description": "The website and business are currently in the setup phase, so services, stock and turnaround times are not final. Early enquiries are still welcome, and Gary will confirm honestly what he can fit in and help with.",
+    "headline": "Vintage record players brought back with care, honesty and a proper eye for detail.",
+    "description": "This is still an early-stage launch, so some services and timings may shift as the workshop settles in. Genuine enquiries are very welcome, and Gary will be clear about what he can realistically take on and help with.",
     "primaryCtaLabel": "Send an enquiry",
     "secondaryCtaLabel": "See how it works",
     "trustPoints": [
-      "Early enquiries are welcome while the service is being set up",
+      "Enquiries are welcome while the workshop offering is still settling in",
       "Experienced work on Dansette, Bush, HMV and similar players",
-      "Collection options can be discussed once the right service is confirmed"
+      "Replies are currently within three working days"
     ]
   },
   "about": {
-    "title": "A workshop built around practical restoration, servicing, and honest pricing.",
+    "title": "A workshop built around practical restoration, careful servicing and honest advice.",
     "paragraphs": [
       "Every machine is assessed on its own condition, not pushed into a one-size-fits-all package. Some need a simple service, some need mechanical overhaul, and some deserve a full cosmetic and electrical restoration.",
-      "The business is still in its setup phase, so not everything on the site is final yet. Even so, genuine enquiries are welcome and Gary will be clear about what can realistically be taken on."
+      "This business is still in its setup phase, so not every detail on the site is fixed yet. Even so, serious enquiries are welcome and Gary will be upfront about what can be fitted in, what needs more time, and what is worth doing."
     ],
     "image": "/uploads/dansette.jpg",
     "imageAlt": "A restored vintage Dansette record player with fresh cabinet covering"
@@ -56,11 +56,11 @@
     "responseTime": "Within three working days",
     "email": "gary@vintagerecordplayers.co.uk",
     "phone": "",
-    "emailSetupNote": "The website and business are still being set up, so details may change. Enquiries are still welcome and Gary will confirm what can realistically be fitted in."
+    "emailSetupNote": "The workshop is still being set up, so some details may change. If you send an enquiry, Gary will confirm what is possible and what kind of timescale is realistic."
   },
   "setupPhase": {
     "enabled": true,
-    "headline": "Currently in setup phase",
-    "message": "The website and business are not fully launched yet, so services, listings and timings are still being finalised. You are still very welcome to send an enquiry and Gary will confirm what he can realistically help with."
+    "headline": "Early launch enquiries welcome",
+    "message": "The workshop and website are still being finalised, so some services, stock and timings may change. You are still very welcome to get in touch, and Gary will confirm what he can realistically help with and when."
   }
 }
