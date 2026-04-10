@@ -14,7 +14,7 @@ function HowItWorks({ content, onSelectService }: HowItWorksProps) {
                 <h1 id="workflow-heading">A clear route from first enquiry to a player ready to return.</h1>
                 <p>
                     Start with the type of help you need, decide whether you will send the player yourself or want collection discussed,
-                    and Gary will confirm the most sensible route from there.
+                    and we will confirm the most sensible route from there.
                 </p>
             </div>
 

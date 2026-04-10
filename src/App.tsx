@@ -6,6 +6,7 @@ import Gallery from './components/Gallery';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import HowItWorks from './components/HowItWorks';
+import Introduction from './components/Introduction';
 import Seo from './components/Seo';
 import Services from './components/Services';
 import Shop from './components/Shop';
@@ -169,6 +170,7 @@ function App() {
                 {showHome ? (
                     <>
                         <Hero content={siteSettings.hero} featuredImage={featuredGalleryImage} specialisms={siteSettings.specialisms} />
+                        {siteSettings.introduction?.enabled ? <Introduction content={siteSettings.introduction} /> : null}
                         <About content={siteSettings.about} specialisms={siteSettings.specialisms} ebayUrl={siteSettings.brand.ebayUrl} />
                         <Services content={servicesContent} onSelectService={handleSelectService} />
                         <Gallery items={galleryItems} />

@@ -24,6 +24,12 @@ export interface HeroContent {
     trustPoints: string[];
 }
 
+export interface IntroductionContent {
+    enabled: boolean;
+    title: string;
+    summary: string;
+}
+
 export interface AboutContent {
     title: string;
     paragraphs: string[];
@@ -49,6 +55,7 @@ export interface SiteSettings {
     seo: SeoContent;
     brand: BrandContent;
     hero: HeroContent;
+    introduction?: IntroductionContent;
     about: AboutContent;
     specialisms: string[];
     contact: ContactContent;

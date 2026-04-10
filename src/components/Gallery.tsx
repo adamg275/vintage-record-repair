@@ -31,7 +31,7 @@ function Gallery({ items }: GalleryProps) {
                 <h2 id="gallery-heading">Examples of the finish, presentation and workshop work behind each player.</h2>
                 <p>
                     Browse recent restorations and sale preparation work for a better sense of the standards, materials and overall look
-                    Gary is aiming for.
+                    we aim for.
                 </p>
             </div>
 

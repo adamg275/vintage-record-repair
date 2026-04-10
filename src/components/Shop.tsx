@@ -26,7 +26,7 @@ function Shop({ listings, onSelectService }: ShopProps) {
                 <span className="section-label">Webshop</span>
                 <h1 id="shop-heading">Finished players, previous sales and stock worth asking about.</h1>
                 <p>
-                    This page shows the kind of machines Gary prepares and the standard of finish to expect. If something catches your eye,
+                    This page shows the kind of machines we prepare and the standard of finish to expect. If something catches your eye,
                     send an enquiry and the form will be filled in for that exact player.
                 </p>
             </div>

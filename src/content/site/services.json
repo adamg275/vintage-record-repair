@@ -1,156 +1,156 @@
 {
-  "categories": [
-    {
-      "category": "Repairs",
-      "description": "Targeted work when the fault is fairly clear.",
-      "items": [
-        {
-          "name": "Motor repair or replacement",
-          "price": "Enquire",
-          "summary": "Motor strip-down, lubrication and replacement work where the original unit cannot be saved."
-        },
-        {
-          "name": "Belt or idler service",
-          "price": "Enquire",
-          "summary": "Replacement of worn drive parts, followed by speed and running checks."
-        },
-        {
-          "name": "Electrical fault repair",
-          "price": "Enquire",
-          "summary": "Investigation and repair of amplifier, switch, wiring and power-related faults."
-        },
-        {
-          "name": "Speaker, stylus or cartridge replacement",
-          "price": "Enquire",
-          "summary": "Common playback parts replaced where age or wear is affecting performance."
-        }
-      ]
-    },
-    {
-      "category": "Restoration",
-      "description": "Deeper mechanical and cosmetic work for tired players.",
-      "items": [
-        {
-          "name": "Full mechanical restoration",
-          "price": "Enquire",
-          "summary": "A more complete overhaul for players that need reliability rather than a quick patch."
-        },
-        {
-          "name": "Cabinet re-covering",
-          "price": "Enquire",
-          "summary": "Fresh cabinet finish while keeping the look sympathetic to the period."
-        },
-        {
-          "name": "Full restoration with re-cover",
-          "price": "From £180",
-          "summary": "Combined mechanical and cosmetic restoration for machines worth fully reviving."
-        }
-      ]
-    },
-    {
-      "category": "Servicing",
-      "description": "Routine maintenance for players that still work but need attention.",
-      "items": [
-        {
-          "name": "Full service",
-          "price": "Enquire",
-          "summary": "A more thorough service including setup checks on key wear items."
-        }
-      ]
-    }
-  ],
-  "note": "Original parts are used where they remain safe and serviceable. If a modern replacement is the better option, that is discussed before the work goes ahead.",
-  "processSteps": [
-    {
-      "title": "Choose the right level of work",
-      "description": "Start with a diagnostic, service or restoration route so the likely scope is clear from the beginning."
-    },
-    {
-      "title": "Decide how the player will travel",
-      "description": "Choose self-shipping or ask Gary to arrange courier collection for you."
-    },
-    {
-      "title": "Approve the plan before extra work",
-      "description": "If hidden faults or extra parts turn up, you hear about them before anything additional is charged."
-    },
-    {
-      "title": "Get the player back ready to use",
-      "description": "Once finished and tested, the player is prepared for collection, return shipping or onward delivery."
-    }
-  ],
-  "servicePlans": [
-    {
-      "name": "Workshop assessment",
-      "startingPrice": "From £35",
-      "summary": "A sensible starting point if you know something is wrong but do not yet know the cause.",
-      "includes": [
-        "Bench diagnosis and initial safety review",
-        "Recommendation for repair, service or restoration",
-        "Clear estimate before deeper work starts"
-      ],
-      "options": [
-        {
-          "name": "You handle shipping",
-          "price": "From £35",
-          "summary": "You drop off the player yourself or arrange delivery to Gary.",
-          "prefillService": "Workshop assessment - self shipping"
-        },
-        {
-          "name": "Courier included",
-          "price": "From £65",
-          "summary": "Collection and return are arranged with you as part of the booking.",
-          "prefillService": "Workshop assessment - courier included"
-        }
-      ]
-    },
-    {
-      "name": "Service and setup",
-      "startingPrice": "From £55",
-      "summary": "Ideal for working players that need dependable everyday use again.",
-      "includes": [
-        "Cleaning, lubrication and setup checks",
-        "Inspection of key wear parts and playback performance",
-        "Advice if any larger faults are uncovered"
-      ],
-      "options": [
-        {
-          "name": "You handle shipping",
-          "price": "From £55",
-          "summary": "You arrange delivery or drop-off and Gary handles the workshop side from there.",
-          "prefillService": "Service and setup - self shipping"
-        },
-        {
-          "name": "Courier included",
-          "price": "From £95",
-          "summary": "Gary helps arrange collection so the transport side is handled for you.",
-          "prefillService": "Service and setup - courier included"
-        }
-      ]
-    },
-    {
-      "name": "Full restoration",
-      "startingPrice": "From £180",
-      "summary": "For worthwhile machines that need proper mechanical attention and cosmetic improvement.",
-      "includes": [
-        "Mechanical restoration and testing",
-        "Cabinet recovery or cosmetic refresh where agreed",
-        "Final playback checks before return"
-      ],
-      "options": [
-        {
-          "name": "You handle shipping",
-          "price": "From £180",
-          "summary": "You manage the journey to the workshop and Gary handles the restoration work.",
-          "prefillService": "Full restoration - self shipping"
-        },
-        {
-          "name": "Courier included",
-          "price": "From £235",
-          "summary": "Gary coordinates collection and return alongside the restoration booking.",
-          "prefillService": "Full restoration - courier included"
-        }
-      ]
-    }
-  ],
-  "shippingNote": "Courier availability depends on the player size, destination and packing requirements. Final transport arrangements are confirmed before collection is booked."
+    "categories":  [
+                       {
+                           "category":  "Repairs",
+                           "description":  "Targeted work when the fault is fairly clear.",
+                           "items":  [
+                                         {
+                                             "name":  "Motor repair or replacement",
+                                             "price":  "Enquire",
+                                             "summary":  "Motor strip-down, lubrication and replacement work where the original unit cannot be saved."
+                                         },
+                                         {
+                                             "name":  "Belt or idler service",
+                                             "price":  "Enquire",
+                                             "summary":  "Replacement of worn drive parts, followed by speed and running checks."
+                                         },
+                                         {
+                                             "name":  "Electrical fault repair",
+                                             "price":  "Enquire",
+                                             "summary":  "Investigation and repair of amplifier, switch, wiring and power-related faults."
+                                         },
+                                         {
+                                             "name":  "Speaker, stylus or cartridge replacement",
+                                             "price":  "Enquire",
+                                             "summary":  "Common playback parts replaced where age or wear is affecting performance."
+                                         }
+                                     ]
+                       },
+                       {
+                           "category":  "Restoration",
+                           "description":  "Deeper mechanical and cosmetic work for tired players.",
+                           "items":  [
+                                         {
+                                             "name":  "Full mechanical restoration",
+                                             "price":  "Enquire",
+                                             "summary":  "A more complete overhaul for players that need reliability rather than a quick patch."
+                                         },
+                                         {
+                                             "name":  "Cabinet re-covering",
+                                             "price":  "Enquire",
+                                             "summary":  "Fresh cabinet finish while keeping the look sympathetic to the period."
+                                         },
+                                         {
+                                             "name":  "Full restoration with re-cover",
+                                             "price":  "From Â£180",
+                                             "summary":  "Combined mechanical and cosmetic restoration for machines worth fully reviving."
+                                         }
+                                     ]
+                       },
+                       {
+                           "category":  "Servicing",
+                           "description":  "Routine maintenance for players that still work but need attention.",
+                           "items":  [
+                                         {
+                                             "name":  "Full service",
+                                             "price":  "Enquire",
+                                             "summary":  "A more thorough service including setup checks on key wear items."
+                                         }
+                                     ]
+                       }
+                   ],
+    "note":  "Original parts are used where they remain safe and serviceable. If a modern replacement is the better option, that is discussed before the work goes ahead.",
+    "processSteps":  [
+                         {
+                             "title":  "Choose the right level of work",
+                             "description":  "Start with a diagnostic, service or restoration route so the likely scope is clear from the beginning."
+                         },
+                         {
+                             "title":  "Decide how the player will travel",
+                             "description":  "Choose self-shipping or ask us to arrange courier collection for you."
+                         },
+                         {
+                             "title":  "Approve the plan before extra work",
+                             "description":  "If hidden faults or extra parts turn up, you hear about them before anything additional is charged."
+                         },
+                         {
+                             "title":  "Get the player back ready to use",
+                             "description":  "Once finished and tested, the player is prepared for collection, return shipping or onward delivery."
+                         }
+                     ],
+    "servicePlans":  [
+                         {
+                             "name":  "Workshop assessment",
+                             "startingPrice":  "From Â£35",
+                             "summary":  "A sensible starting point if you know something is wrong but do not yet know the cause.",
+                             "includes":  [
+                                              "Bench diagnosis and initial safety review",
+                                              "Recommendation for repair, service or restoration",
+                                              "Clear estimate before deeper work starts"
+                                          ],
+                             "options":  [
+                                             {
+                                                 "name":  "You handle shipping",
+                                                 "price":  "From Â£35",
+                                                 "summary":  "You drop off the player yourself or arrange delivery to the workshop.",
+                                                 "prefillService":  "Workshop assessment - self shipping"
+                                             },
+                                             {
+                                                 "name":  "Courier included",
+                                                 "price":  "From Â£65",
+                                                 "summary":  "Collection and return are arranged with you as part of the booking.",
+                                                 "prefillService":  "Workshop assessment - courier included"
+                                             }
+                                         ]
+                         },
+                         {
+                             "name":  "Service and setup",
+                             "startingPrice":  "From Â£55",
+                             "summary":  "Ideal for working players that need dependable everyday use again.",
+                             "includes":  [
+                                              "Cleaning, lubrication and setup checks",
+                                              "Inspection of key wear parts and playback performance",
+                                              "Advice if any larger faults are uncovered"
+                                          ],
+                             "options":  [
+                                             {
+                                                 "name":  "You handle shipping",
+                                                 "price":  "From Â£55",
+                                                 "summary":  "You arrange delivery or drop-off and we handle the workshop side from there.",
+                                                 "prefillService":  "Service and setup - self shipping"
+                                             },
+                                             {
+                                                 "name":  "Courier included",
+                                                 "price":  "From Â£95",
+                                                 "summary":  "We help arrange collection so the transport side is handled for you.",
+                                                 "prefillService":  "Service and setup - courier included"
+                                             }
+                                         ]
+                         },
+                         {
+                             "name":  "Full restoration",
+                             "startingPrice":  "From Â£180",
+                             "summary":  "For worthwhile machines that need proper mechanical attention and cosmetic improvement.",
+                             "includes":  [
+                                              "Mechanical restoration and testing",
+                                              "Cabinet recovery or cosmetic refresh where agreed",
+                                              "Final playback checks before return"
+                                          ],
+                             "options":  [
+                                             {
+                                                 "name":  "You handle shipping",
+                                                 "price":  "From Â£180",
+                                                 "summary":  "You manage the journey to the workshop and we handle the restoration work.",
+                                                 "prefillService":  "Full restoration - self shipping"
+                                             },
+                                             {
+                                                 "name":  "Courier included",
+                                                 "price":  "From Â£235",
+                                                 "summary":  "We coordinate collection and return alongside the restoration booking.",
+                                                 "prefillService":  "Full restoration - courier included"
+                                             }
+                                         ]
+                         }
+                     ],
+    "shippingNote":  "Courier availability depends on the player size, destination and packing requirements. Final transport arrangements are confirmed before collection is booked."
 }

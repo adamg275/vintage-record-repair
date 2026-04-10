@@ -1,0 +1,34 @@
+.introduction {
+    width: var(--container);
+    margin: 0 auto 4rem;
+}
+
+.introduction__inner {
+    max-width: 54rem;
+    padding: 1.6rem 1.8rem;
+    border-radius: var(--radius-xl);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(247, 240, 230, 0.88));
+    border: 1px solid rgba(183, 134, 46, 0.22);
+    box-shadow: var(--shadow-soft);
+}
+
+.introduction__inner h2 {
+    margin-top: 0.9rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.introduction__inner p {
+    margin-top: 1rem;
+    color: var(--color-ink-soft);
+    font-size: 1.08rem;
+}
+
+@media (max-width: 720px) {
+    .introduction {
+        margin-bottom: 3rem;
+    }
+
+    .introduction__inner {
+        padding: 1.3rem 1.25rem;
+    }
+}

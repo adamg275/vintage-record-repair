@@ -67,10 +67,10 @@ function Contact({ selectedService, serviceOptions, contact }: ContactProps) {
             <div className="contact__inner">
                 <div className="contact__intro">
                     <span className="section-label">Get in touch</span>
-                    <h2 id="contact-heading">Tell Gary which player, service or sale item you want to discuss.</h2>
+                    <h2 id="contact-heading">Tell us which player, service or sale item you want to discuss.</h2>
                     <p>
                         The website and business are still being set up, so not everything here is final yet. Even so, enquiries are welcome
-                        and Gary will come back honestly about what he can realistically fit in and help with.
+                        and we will come back honestly about what we can realistically fit in and help with.
                     </p>
 
                     <dl className="contact__details">

@@ -14,7 +14,7 @@ function Services({ content, onSelectService }: ServicesProps) {
                 <h2 id="services-heading">Workshop help for fault finding, servicing and full restoration.</h2>
                 <p>
                     If your player needs attention, choose the service that sounds closest to the problem and send an enquiry.
-                    Gary will reply within three working days with the next sensible step.
+                    We will reply within three working days with the next sensible step.
                 </p>
             </div>
 
